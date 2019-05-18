@@ -1,0 +1,184 @@
+/*-----------------------------------reset-------------------------------------*/
+body{
+    margin:0px;
+    padding:0px;
+    background-color:#fff;
+    font-size:16px;
+    color:#666666;
+    font-family: "微软雅黑";
+	background: #f5f5f5;
+}
+::selection{
+	/* background-color: #ff007f; */
+	background-color: #ff5dad;
+	color: #ffffff;
+}
+::-webkit-selection{
+	/* background-color: #ff007f; */
+	background-color: #ff5dad;
+	color: #ffffff;
+}
+
+p,h1,h2,h3,h4,h5,input,ul,li,dl,dt,dd,img,pre{
+    padding:0;
+    margin:0;
+    outline:0;
+    border:0;
+}
+
+i,em,cite{
+	font-style:normal;
+}
+
+li{
+    list-style:none;
+}
+a{
+	color: black;
+}
+a,a:hover,a:active,a:visited,a:link{
+	text-decoration:none;
+}
+img{
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+.fl{
+    float:left;
+}
+
+.fr{
+    float:right;
+}
+
+.clearfloat{
+    clear:both;
+    overflow:hidden;
+}
+.clearfloatx{
+	clear:both;
+}
+.w1440{
+    width:1440px;
+    margin:0 auto;
+	position: relative;
+}
+.w1250{
+	width: 1250px;
+	margin: 0 auto;
+	position: relative;
+}
+.transition5{
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+.transition3{
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+/*文字渐变的类*/
+.textlinear{
+	background: -webkit-linear-gradient(#33cccc,#00ccff,#3366cc);
+	background: -moz-linear-gradient(#33cccc,#00ccff,#3366cc);
+	background: -ms-linear-gradient(#33cccc,#00ccff,#3366cc);
+	background: -o-linear-gradient(#33cccc,#00ccff,#3366cc);
+	background: linear-gradient(#33cccc,#00ccff,#3366cc);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+/*背景渐变的类*/
+.bglinear{
+	background: -webkit-linear-gradient(to right,#0e97fd,#4ec8fe);
+	background: -moz-linear-gradient(to right,#0e97fd,#4ec8fe);
+	background: -ms-linear-gradient(to right,#0e97fd,#4ec8fe);
+	background: -o-linear-gradient(to right,#0e97fd,#4ec8fe);
+	background: linear-gradient(to right,#0e97fd,#4ec8fe);
+	box-shadow: 0 0 15px 0 rgba(68,192,254,.7);
+}
+.title{
+	padding: 30px 0;
+	text-align: center;
+	color: #000000;
+}
+.main-block{
+	
+}
+.spacing{
+	padding-bottom: 30px;
+}
+.spacing h2{
+	color: #000000;
+	padding-bottom: 10px;
+}
+.spacing h3{
+	font-size: 1.5em;
+	color: #333333;
+}
+.spacing h4{
+	font-size: 1.1em;
+	padding-bottom: 10px;
+	color: #333333;
+}
+.spacing img{
+	display: block;
+	/* padding: 30px 0; */
+	margin: 30px 0;
+}
+.spacing a{
+	color: #ff007f;
+	display: inline-block;
+	padding: 0px 6px;
+	box-sizing: border-box;
+	border-radius: 4px;
+}
+.spacing a:hover{
+	color: #ffffff;
+	background: #ff007f;
+}
+.createRemoteBranch{
+	box-sizing: border-box;
+}
+.cherry{
+	color: #ff007f;
+}
+.indent{
+	display: inline-block;
+	text-indent: 36px;
+}
+.greenw{
+	background: #28A946;
+	color: white;
+	padding: 0 6px;
+	border-radius: 4px;
+}
+.end{
+	padding: 10px 0 40px 0;
+	text-align: center;
+	color: black;
+}
+.red{
+	color: red;
+}
+img:hover{
+	cursor: pointer;
+}
+.imgw img{
+	width: 100%;
+}
+@media only screen and (max-width: 1440px) {
+	.w1440{
+		width: 1250px;
+	}
+	.imgw1250 img{
+		width: 100%;
+	}
+}
