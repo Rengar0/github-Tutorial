@@ -6,13 +6,13 @@
 		<link rel="stylesheet" type="text/css" href="css/github.css"/>
 	</head>
 	<body>
+		<div class="title">
+			<h1>将自己的项目展示到github上面</h1>
+		</div>
 		<div class="main-block w1440">
-			<div class="title">
-				<h1>将自己的项目展示到github上面</h1>
-			</div>
 			<div class="spacing">
-				<h2>简易步骤</h2>
-				<p>01、安装git <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></p>
+				<h2><span>简易步骤</span></h2>
+				<p>01、安装git <a href="https://git-scm.com/downloads" target="_blank">https://git-scm.com/downloads</a></p>
 				<p>
 					02、配置信息：<br>
 					<span class="cherry indent">git config --global user.name "Your Name"</span><br>
@@ -22,7 +22,7 @@
 					03、创建ssh密钥，并且验证是否成功，然后在github上添加一个SSH key，将公钥id_rsa.pub添加到SSH key<br>
 					<span class="cherry indent">ssh-keygen -t rsa -C "12345678@163.com"</span><br>
 					<span class="cherry indent">ssh -T git@github.com</span>
-				</p>
+				</p> 
 				<p>
 					04、创建本地仓库：在你需要上传文件的目录下右键Git Bash Here，输入指令：<br>
 					<span class="cherry indent">git init</span>
@@ -60,15 +60,15 @@
 				</p>
 			</div>
 			<div class="spacing">
-				<h2>图文教程</h2>
+				<h2><span>图文教程</span></h2>
 			</div>
 			<div class="installgithub spacing">
-				<h2>一、安装github</h2>
+				<h2><span>一、安装github</span></h2>
 				<p>首先，到官网下载安装git(<a href="https://git-scm.com/downloads" target="_blank">https://git-scm.com/downloads</a>)，勾选在桌面生成应用程序图标</p>
 				<img src="images/icons.png" alt="">
 			</div>
 			<div class="config spacing">
-				<h2>二、配置个人信息</h2>
+				<h2><span>二、配置个人信息</span></h2>
 				<p>在桌面打开Git Bash，输入一下指令</p>
 				<p><span class="cherry">git config --global user.name "Your Name"</span></p>
 				<p><span class="cherry">git config --global user.email "12345678@163.com"</span></p>
@@ -77,43 +77,45 @@
 				<img src="images/config.jpg" alt="">
 			</div>
 			<div class="ssh spacing">
-				<h2>三、创建ssh密钥</h2>
+				<h2><span>三、创建ssh密钥</span></h2>
 				<p>在桌面打开Git Bash，输入指令：<span class="cherry">ssh-keygen -t rsa -C "12345678@163.com"</span>，然后一直回车直到完成（Overwrite的时候，输入yes，回车即可）</p>
 				<img src="images/ssh01.jpg" alt="">
 				<p>为了验证是否成功，在git bash下输入：<span class="cherry">ssh -T git@github.com</span>。或者直接在C盘搜索：.ssh，在.ssh文件夹下面有两个密钥，一个是私钥<span class="cherry">id_rsa</span>，一个是公钥<span class="cherry">id_rsa.pub</span></p>
 				<p>如果是第一次的会提示是否continue，输入yes就会看到：You've successfully authenticated, but GitHub does not provide shell access 。这就表示已成功连上github。</p>
-				<p>然后，在浏览器登录github，在github上面新建一个sshkey</p>
+				<img src="images/ssh_-T_git@github.com.png" alt="">
+				<p>然后，在浏览器登录github(<a href="https://github.com/" target="_blank">https://github.com/</a>)，在github上面新建一个sshkey</p>
 				<p><small style="color: red;">ps:输入ssh -T git@github.com报错git@github.com: Permission denied (publickey).是因为你重新配置了个人信息，本机的公钥跟github的公钥不匹配，所以要在github上面再添加一个SSH key将本机的公钥复制上去即可</small></p>
 				<div class="imgw"><img src="images/ssh02.png" alt=""></div>
 				<div class="imgw"><img src="images/ssh03.png" alt=""></div>
 				<p>然后在C盘（如果Git安装在C盘）搜索id_rsa.pub，用记事本或者其他note工具（notepad++、editplus）打开id_rsa.pub文件，复制里面的内容（Ctrl + A全选，Ctrl + C复制）</p>
 				<div class="imgw1250"><img src="images/ssh05.png" alt=""></div>
-				<p>将id_rsa.pub文件里面的内容粘贴到这里来，点击<span class="greenw">Add SSH key</span>即可（因为我已经添加过一个SSH了，所以添加成功的结果可以在上面那张图看到）</p>
-				<div class="imgw"><img src="images/ssh04.png" alt=""></div>
+				<p>将刚刚复制的id_rsa.pub文件里面的内容粘贴到这里来，点击<span class="greenw">Add SSH key</span>即可（因为我已经添加过一个SSH了，所以添加成功的结果可以在上面那张图看到）</p>
+				<div class="imgw"><img src="images/ssh04.jpg" alt=""></div>
 			</div>
 			<div class="spacing">
-				<h2>四、创建本地仓库</h2>
+				<h2><span>四、创建本地仓库</span></h2>
 				<p>进入你自己做好了的项目的目录（D:\workspace\ivy），右键Git Bash Here，输入指令：<span class="cherry">git init</span>，这个时候，会在该目录下创建一个.git的隐藏文件夹，你的项目目录就成了一个git的仓库。</p>
 				<p>git仓库包含两个部分，一个是暂存区，一个是版本库</p>
 				<img src="images/1workspace.png" alt="">
 				<img src="images/2git-init.png" alt="">
 			</div>
 			<div class="spacing">
-				<h2>五、创建远程仓库</h2>
+				<h2><span>五、创建远程仓库</span></h2>
 				<p>打开浏览器，登录github，在github上创建一个新的仓库，点击右上角的“+”，点击new repository（新存储库），Repository name（存储库名称）用英文不要用中文，Description (optional)（说明（可选））这里可以写中文，权限勾选Public，点击<span class="greenw">Create repository</span>即可，创建成功之后就可以拿到远程仓库的地址：git@github.com:Rengar0/project1.git</p>
 				<div class="imgw"><img src="images/createRemote.png" alt=""></div>
 			</div>
 			<div class="spacing">
-				<h2>六、建立本地仓库与远程仓库的连接</h2>
+				<h2><span>六、建立本地仓库与远程仓库的连接</span></h2>
 				<p>回到git本地仓库，输入指令：<span class="cherry">git remote add origin git@github.com:Rengar0/project1.git</span></p>
 				<p>查看仓库是否配置成功：<span class="cherry">git remote -v</span></p>
 				<img src="images/3connection.png" alt="">
 				<p>如果你添加了许多的地址（你创建了很多个远程仓库），可能就需要考虑用那个地址，这里有一个切换指令：<span class="cherry">git remote set-url origin git@github.com:Rengar0/ivy.git</span></p>
 				<img src="images/set-url.png" alt="">
 				<p>删除远程地址：<span class="cherry">git remote rm git@github.com:Rengar0/project1.git</span>（该指令会报错：fatal: No such remote: 'git@github.com:Rengar0/project1.git'）</p>
+				<p>所以，用这条：<span class="cherry">git remote rm origin</span></p>
 			</div>
 			<div class="spacing">
-				<h2>七、添加文件到暂存区</h2>
+				<h2><span>七、添加文件到暂存区</span></h2>
 				<p>添加单个文件：<span class="cherry">git add "index.html"</span></p>
 				<p>添加全部文件：<span class="cherry">git add ./</span></p>
 				<p>查看仓库变更状态：<span class="cherry">git status</span></p>
@@ -123,41 +125,41 @@
 				<img src="images/4-2allfile.png" alt="">
 			</div>
 			<div class="spacing">
-				<h2>八、提交到版本库</h2>
+				<h2><span>八、提交到版本库</span></h2>
 				<p><span class="cherry">git commit -m "备注"</span></p>
 				<img src="images/5gitcommit-m.png" alt="">
 				<p></p>
 				<p></p>
 			</div>
 			<div class="spacing">
-				<h2>九、推送到远程仓库</h2>
+				<h2><span>九、推送到远程仓库</span></h2>
 				<p>第一次使用<span class="cherry">git push -u origin master</span>后，之后就可以用简写命名：<span class="cherry">git push origin</span></p>
 				<p>这里推送到的是远程仓库的master分支</p>
 				<img src="images/6git_push_-u_origin_master.png" alt="">
 				<p></p>
 			</div>
 			<div class="spacing">
-				<h2>十、创建gh-pages分支展示自己的项目</h2>
+				<h2><span>十、创建gh-pages分支展示自己的项目</span></h2>
 				<p>创建gh-pages分支指令：<span class="cherry">git checkout --orphan gh-pages</span></p>
 				<img src="images/7gh-pages01.png" alt="">
 				<p>推送到远程仓库的gh-pages分支：<span class="cherry">git push origin gh-pages</span></p>
 				<img src="images/7gh-pages02.png" alt="">
-				<p></p>
-				<p></p>
+				<p><span class="useRemote bglinear">或者直接推送到master分支，直接用master分支展示</span></p>
+				<div class="imgw"><img src="images/master.png" alt=""></div>
 			</div>
 			<div class="spacing">
-				<h2>十一、项目地址</h2>
+				<h2><span>十一、项目地址</span></h2>
 				<p>点击进入你项目所在的那个存储库，然后按照以下步骤即可</p>
 				<div class="imgw"><img src="images/8project_address01.png" alt=""></div>
 				<div class="imgw"><img src="images/8project_address02.png" alt=""></div>
 				<p>打开https://rengar0.github.io/ivy/就可以让别人看到你自己做的项目啦！</p>
 			</div>
 			<div class="end">
-				<h1>----------END----------</h1>
+				<h1><span class="t_linear">----------END----------</span></h1>
 			</div>
-			<div class="spacing"><h3>拓展知识：</h3></div>
+			<div class="spacing"><h3><span>拓展知识：</span></h3></div>
 			<div class="spacing">
-				<h4>克隆远程仓库到本地</h4>
+				<h4><span>克隆远程仓库到本地</span></h4>
 				<p>[01]、新建一个空文件夹，文件夹名称尽量用英文吧</p>
 				<p>[02]、初始化文件夹成一个git仓库，<span class="cherry">git init</span></p>
 				<p>[03]、连接上别人的远程仓库<span class="cherry">git remote add origin git@github.com:Rengar0/project1.git</span></p>
@@ -170,7 +172,7 @@
 				<p>克隆命令：git clone https://github.com/Rengar0/project1.git</p>
 			</div>
 			<div class="createRemoteBranch spacing">
-				<h4>如何创建远程分支？</h4>
+				<h4><span>如何创建远程分支？</span></h4>
 				<p>1、添加本地分支：<span class="cherry">git branch ivy</span></p>
 				<p>2、查看本地分支：<span class="cherry">git branch</span></p>
 				<p>3、切换分支：<span class="cherry">git checkout ivy</span></p>
@@ -183,7 +185,7 @@
 				<p>8、已在github上成功创建ivy分支</p>
 			</div>
 			<div class="spacing">
-				<h4>验证当前提交树的内容已经是update以后的内容</h4>
+				<h4><span>验证当前提交树的内容已经是update以后的内容</span></h4>
 				<p><span class="cherry">git write-tree</span></p>
 				<p><span class="cherry">git cat-file -p 1a8a498b4a08dcb86c839ed8aa3d59a823eb4499</span></p>
 				<p></p>
@@ -191,7 +193,7 @@
 				<img src="images/git_write-tree.png" alt="">
 			</div>
 			<div class="spacing">
-				<h4>git add使用大全</h4>
+				<h4><span>git add使用大全</span></h4>
 				<p><a href="https://blog.csdn.net/u012953143/article/details/88777111" target="_blank">https://blog.csdn.net/u012953143/article/details/88777111</a></p>
 			</div>
 			<div style="height: 300px;"></div>
@@ -205,7 +207,18 @@
 				var src = $(this).attr('src');
 				console.info(src);
 				window.open(src);
-			})
+			});
+			var arr = ['0'];
+			console.info(arr[1]);
+			setTimeout(function(){
+				console.info('3秒之后执行该延时器，刷新会不会重置该延时器？');
+			},3000);
+			var status = sessionStorage.getItem('num');
+			if(status != null || status != 'NaN'){
+				sessionStorage.setItem('num', parseInt(status)+1);
+			}else{
+				sessionStorage.setItem('num', 1);
+			}
 		})
 	</script>
 </html>
