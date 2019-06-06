@@ -97,17 +97,22 @@ img{
 }
 /*背景渐变的类*/
 .bglinear{
-	background: -webkit-linear-gradient(to right,#0e97fd,#4ec8fe);
-	background: -moz-linear-gradient(to right,#0e97fd,#4ec8fe);
-	background: -ms-linear-gradient(to right,#0e97fd,#4ec8fe);
-	background: -o-linear-gradient(to right,#0e97fd,#4ec8fe);
-	background: linear-gradient(to right,#0e97fd,#4ec8fe);
+	background: -webkit-linear-gradient(120deg,#e100ff,#00ffb8);
+	background: -moz-linear-gradient(120deg,#e100ff,#00ffb8);
+	background: -ms-linear-gradient(120deg,#e100ff,#00ffb8);
+	background: -o-linear-gradient(120deg,#e100ff,#00ffb8);
+	background: linear-gradient(120deg,#e100ff,#00ffb8);
 	box-shadow: 0 0 15px 0 rgba(68,192,254,.7);
 }
 .title{
-	padding: 30px 0;
+	padding: 5rem 6rem;
 	text-align: center;
-	color: #000000;
+	color: #ffffff;
+	background: -webkit-linear-gradient(120deg,#e100ff,#00ffb8);
+	background: -moz-linear-gradient(120deg,#e100ff,#00ffb8);
+	background: -ms-linear-gradient(120deg,#e100ff,#00ffb8);
+	background: -o-linear-gradient(120deg,#e100ff,#00ffb8);
+	background: linear-gradient(120deg,#e100ff,#00ffb8);
 }
 .main-block{
 	
@@ -116,8 +121,19 @@ img{
 	padding-bottom: 30px;
 }
 .spacing h2{
-	color: #000000;
+	/* color: #ff007f; */
+	/* color: #9300ff; */
 	padding-bottom: 10px;
+}
+.spacing h2 span,.spacing h3 span,.spacing h4 span,.t_linear{
+	background: -webkit-linear-gradient(120deg,#e100ff,#00ffb8);
+	background: -moz-linear-gradient(120deg,#e100ff,#00ffb8);
+	background: -ms-linear-gradient(120deg,#e100ff,#00ffb8);
+	background: -o-linear-gradient(120deg,#e100ff,#00ffb8);
+	background: linear-gradient(120deg,#e100ff,#00ffb8);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
 }
 .spacing h3{
 	font-size: 1.5em;
@@ -163,7 +179,7 @@ img{
 .end{
 	padding: 10px 0 40px 0;
 	text-align: center;
-	color: black;
+	/* color: black; */
 }
 .red{
 	color: red;
@@ -173,6 +189,14 @@ img:hover{
 }
 .imgw img{
 	width: 100%;
+}
+.useRemote{
+	display: inline-block;
+	font-size: 20px;
+	font-weight: bold;
+	border-radius: 6px;
+	padding: 8px 16px;
+	color: #ffffff;
 }
 @media only screen and (max-width: 1440px) {
 	.w1440{
