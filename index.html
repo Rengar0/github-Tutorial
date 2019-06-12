@@ -185,10 +185,58 @@
 				<p>8、已在github上成功创建ivy分支</p>
 			</div>
 			<div class="spacing">
+				<h4><span>在github上删除文件</span></h4>
+				<p>点击文件或文件夹进入该文件或文件夹</p>
+				<div class="imgw"><img src="images/delete01.png" alt=""></div>
+				<p>点击右上角的垃圾桶即可删除该文件或文件夹</p>
+				<div class="imgw"><img src="images/delete02.png" alt=""></div>
+			</div>
+			<div class="spacing">
+				<h4><span>github暂存区</span></h4>
+				<p>查看暂存区文件</p>
+				<p><span class="cherry">git ls-files --stage</span></p>
+				<img src="images/cachespacedel.png" alt="">
+				<p>删除暂存区内容</p>
+				<p><span class="cherry">rm index.html</span></p>
+				<img src="images/cachespace01.png" alt="">
+			</div>
+			<div class="spacing">
+				<h4><span>在github上更新文件</span></h4>
+				<p>首先进入项目所在存储库，点击<span class="cherry">Upload files</span></p>
+				<div class="imgw"><img src="images/update01.png" alt=""></div>
+				<p>将文件拖拽至编辑区域或者点击<span class="cherry">choose your files</span>来选择你要上传的文件，用新文件覆盖旧文件</p>
+				<div class="imgw"><img src="images/update02.png" alt=""></div>
+			</div>
+			<div class="spacing">
+				<h4><span>把本地改动过的文件更新到远程仓库</span></h4>
+				<p>首先新建一个名为pull文件夹并初始化pull成为一个本地仓库（文件夹名称可以随意起，这里我是为方便下面的教程）</p>
+				<p><span class="cherry">git init</span></p>
+				<p>连接远程仓库</p>
+				<p><span class="cherry">git remote add origin git@github.com:Rengar0/project1.git</span></p>
+				<p>将远程仓库的内容拉取到本地仓库</p>
+				<p><span class="cherry">git pull origin master</span></p>
+				<p>然后，将改动过的文件复制到pull文件夹，覆盖掉pull文件夹里面的文件</p>
+				<p>比如，我在开发工具上改动了index.html（此时pull文件夹里面的内容是从远程仓库上拉取下来的，并没有改动过），那么我就从开发工具里面复制一份改动过的index.html到pull里面，覆盖掉pull里面的index.html文件</p>
+				<p><span class="cherry">git status</span></p>
+				<p>查看一下状态，然后你会发现，哇！变红色了！兴奋的一批！</p>
+				<img src="images/pull.png" alt="">
+				<p><small style="color: red;">ps：如果覆盖了之后查看状态没有变成红色，那么在覆盖了文件之后，新建一个文件（useless.txt），然后再查看状态，再推送到远程仓库</small></p>
+				<p>然后添加全部文件到暂存区，并查看状态</p>
+				<p><span class="cherry">git add ./</span></p>
+				<p><span class="cherry">git status</span></p>
+				<img src="images/pull02.png" alt="">
+				<p>提交到版本库</p>
+				<p><span class="cherry">git commit -m '2019.06.12'</span></p>
+				<img src="images/pull03.png" alt="">
+				<p>推送到远程仓库</p>
+				<p><span class="cherry">git push origin master</span></p>
+				<img src="images/pull04.png" alt="">
+				<p>大功告成，相当perfect！</p>
+			</div>
+			<div class="spacing">
 				<h4><span>验证当前提交树的内容已经是update以后的内容</span></h4>
 				<p><span class="cherry">git write-tree</span></p>
 				<p><span class="cherry">git cat-file -p 1a8a498b4a08dcb86c839ed8aa3d59a823eb4499</span></p>
-				<p></p>
 				<p></p>
 				<img src="images/git_write-tree.png" alt="">
 			</div>
