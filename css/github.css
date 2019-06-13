@@ -108,14 +108,22 @@ img{
 	padding: 5rem 6rem;
 	text-align: center;
 	color: #ffffff;
-	background: -webkit-linear-gradient(120deg,#e100ff,#00ffb8);
-	background: -moz-linear-gradient(120deg,#e100ff,#00ffb8);
-	background: -ms-linear-gradient(120deg,#e100ff,#00ffb8);
-	background: -o-linear-gradient(120deg,#e100ff,#00ffb8);
-	background: linear-gradient(120deg,#e100ff,#00ffb8);
+	background: -webkit-linear-gradient(160deg,#e100ff,#00ffb8);
+	background: -moz-linear-gradient(160deg,#e100ff,#00ffb8);
+	background: -ms-linear-gradient(160deg,#e100ff,#00ffb8);
+	background: -o-linear-gradient(160deg,#e100ff,#00ffb8);
+	background: linear-gradient(160deg,#e100ff,#00ffb8);
 }
 .main-block{
 	
+}
+.spacing .beginner{
+	display: inline-block;
+	font-size: 20px;
+	font-weight: bold;
+	border-radius: 6px;
+	padding: 8px 16px;
+	color: #ffffff;
 }
 .spacing{
 	padding-bottom: 30px;
