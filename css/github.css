@@ -1,11 +1,11 @@
 /*-----------------------------------reset-------------------------------------*/
 body{
-    margin:0px;
-    padding:0px;
-    background-color:#fff;
-    font-size:16px;
-    color:#666666;
-    font-family: "微软雅黑";
+	margin:0px;
+	padding:0px;
+	background-color:#fff;
+	font-size:16px;
+	color:#666666;
+	font-family: "微软雅黑";
 	background: #f5f5f5;
 }
 ::selection{
